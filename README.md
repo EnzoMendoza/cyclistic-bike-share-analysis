@@ -31,3 +31,6 @@ use Cyclistic bikes differently?
 - Report: https://github.com/EnzoMendoza/cyclistic-bike-share-analysis/blob/main/cyclistic_report
 - SQL Log: https://github.com/EnzoMendoza/cyclistic-bike-share-analysis/blob/main/cyclistic_sql_log.sql
 
+<img width="2030" height="1926" alt="Location_summary" src="https://github.com/user-attachments/assets/95f3ffc1-5046-4639-8aab-8b47eae0c7eb" />
+<img width="2030" height="1926" alt="Daily_hourly_summary" src="https://github.com/user-attachments/assets/c79f1adf-b711-4c19-aaaa-9e9cc7935eb1" />
+<img width="2030" height="1926" alt="Monthly_summary" src="https://github.com/user-attachments/assets/6a420ba7-f798-4326-863f-d88867889eca" />
