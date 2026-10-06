@@ -44,3 +44,12 @@ This is the process I went through while completing this case study.
   There is a stark contrast between when the bikes are used between casual users members. The weekdays (Mon-Fri) are predominantly used by members, suspected as they are traveling to and from work. This is backed by the fact that the majority of rides are started at 8 am and 5 pm, which is the normal start and end of the working day.
   Casual users are nearly on-par with the amount of members on the weekend, where the casual users most likely use it for leisure to explore around the city. 
   Casual users also have longer average ride lengths in general compared to members, but especially on weekends (Fri-Sat). This further strengthens the correlation between casual users and leisure activities. Members ride length remains consistent throughout the week, including the weekend.
+
+-- SHARE 
+  1. I used Tableau to make visualizations for my findings. Ultimately I used 9 tables and 3 dashboards which were made into a story. You can find the link to my Tableau viz under the Tableau_Dashboard file.
+
+-- ACT
+Based off all the findings I made during this project, here are the 3 recommendations I would make:
+  1. Focus marketing and promotional resources in areas where casual riders are most prevalent such as Navy Pier or Millennium park. 
+  2. The timing of the marketing events should take place primarily in the summer months and on weekends as casual users are most active around this time.
+  3. With casual users having longer ride times in general, offering a reduced rate the longer the bike is used could appeal to the casual. 
