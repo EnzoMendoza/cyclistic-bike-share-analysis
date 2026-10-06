@@ -1,0 +1,55 @@
+# Cyclistic-bike-share-analysis
+My first case study in my data journey! This is the capstone project for Coursera's Google Data Analytics Course.
+This is the process I went through while completing this case study.
+
+--ASK
+
+1. Business task:
+  "The problem we're trying to solve is understanding the similarities and differences between casual riders and annual members, so we can use that information to help convert casual riders into annual members."
+2. Key stakeholders:
+  "The key stakeholders are Lily Moreno (the marketing director), the Cyclistic executive team, and the marketing analytics team."
+3. How insights drive the decision:
+  "It unlocks the decision of how to target casual riders with a marketing strategy, based on how their riding behavior compares to that of current annual members."
+
+--PREPARE
+1. Data location & organization:
+  "The data consists of 12 CSV files representing the past 12 months of Cyclistic trip data, each containing fields including ride_id, rideable_type, started_at, ended_at, start/end station names and IDs, start/end latitude and longitude, and member_casual."
+2. ROCCC:
+  Reliable — The data comes directly from Cyclistic's own ride-tracking system, capturing every trip taken, not a sample or estimate.
+  Original — First-party data, collected directly by Cyclistic through its own bike-share system (not secondhand or scraped from a third party).
+  Comprehensive — It includes the key fields needed to answer the business question — ride times, station locations, bike type, and rider type (member vs. casual) — though it's limited to trip-level behavior and doesn't include demographic or payment information.
+  Current — Covers the most recent 12 months of ride data, so it reflects up-to-date usage patterns rather than outdated behavior.
+  Cited — The data is publicly provided by Motivate International Inc. under their specific license, which is referenced in the case study.
+3. Privacy considerations:
+  We cannot connect a customers credit card 9nfo to a ride as that is breach of privacy, so we won't know how many times a particular rider has used the service.
+4. Data integrity:
+  Missing values in start_station_name/start_station_id and end_station_name/end_station_id — likely from dockless or valet-style returns where a bike wasn't returned to an official station.
+  Possible inconsistent column structure across the 12 monthly files, if any months used a different schema.
+  Potential invalid time values — cases where ended_at is earlier than started_at, which would produce a negative or nonsensical ride_length once calculated in the Process phase.
+  Possible duplicate ride_id entries across files, which would inflate ride counts if not caught before merging.
+
+-- PROCESS
+  1. I am using DuckDB and SQL to filter and clean the data. I chose these tools as there were millions of rows to process and it would make it faster.
+  2. I kept a log of all SQL query used to perform my data analysis in the file cyclistic_sql_log.sql
+
+-- ANALYZE
+  1. I created 12 tables for which to compare and contrast and find relationships between casual users and members. Originally 6.7 million rides between August 2025 and July 2026, I cutoff rides that were less than one minute and longer than 24 hours because they are outliers. The result left me with 5.7 million rides with a split of 64.4 percent split for members and 35.6 percent for casual users. Below you will find my analysis from the given information:
+  2. MONTHLY USE OF THE SERVICE
+  Riders peak for both users (casual/members) in the warmer seasons and decline gradually into the colder months.
+  Ride length increases greatly for casual users in the summer (21.7 min) compared to the lows of December ( 12.8 min). Members ride length stays consistent throughout the year with a difference of 3 minutes between the high of July and low of December.
+  3. WHERE DO USERS START AND END THEIR RIDES
+  Casual users start and end their rides in more populated areas such as Navy Pier, most likely due to use for leisure.
+  Members start and end their rides in the same 10 stations, showing a consistent pattern due to being used for transportation for work.
+  4. HOW THE SERVICE IS USED
+  There is a stark contrast between when the bikes are used between casual users members. The weekdays (Mon-Fri) are predominantly used by members, suspected as they are traveling to and from work. This is backed by the fact that the majority of rides are started at 8 am and 5 pm, which is the normal start and end of the working day.
+  Casual users are nearly on-par with the amount of members on the weekend, where the casual users most likely use it for leisure to explore around the city. 
+  Casual users also have longer average ride lengths in general compared to members, but especially on weekends (Fri-Sat). This further strengthens the correlation between casual users and leisure activities. Members ride length remains consistent throughout the week, including the weekend.
+
+-- SHARE 
+  1. I used Tableau to make visualizations for my findings. Ultimately I used 9 tables and 3 dashboards which were made into a story. You can find the link to my Tableau viz under the Tableau_Dashboard file.
+
+-- ACT
+Based off all the findings I made during this project, here are the 3 recommendations I would make:
+  1. Focus marketing and promotional resources in areas where casual riders are most prevalent such as Navy Pier or Millennium park. 
+  2. The timing of the marketing events should take place primarily in the summer months and on weekends as casual users are most active around this time.
+  3. With casual users having longer ride times in general, offering a reduced rate the longer the bike is used could appeal to the casual. 
