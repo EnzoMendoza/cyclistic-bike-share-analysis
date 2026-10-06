@@ -3,51 +3,51 @@
 ### --Loading all csv files into separate tables.
 CREATE OR REPLACE TABLE Aug_2025 AS
 FROM
-  "/Users/enzomendoza/Documents/divvy_trip_data_Aug2025_to_Aug2026/copy data/202508-divvy-tripdata.csv";
+  "/Users/Documents/divvy_trip_data_Aug2025_to_Aug2026/copy data/202508-divvy-tripdata.csv";
 
 CREATE OR REPLACE TABLE Sep_2025 AS
 FROM
-  "/Users/enzomendoza/Documents/divvy_trip_data_Aug2025_to_Aug2026/copy data/202509-divvy-tripdata.csv";
+  "/Users/Documents/divvy_trip_data_Aug2025_to_Aug2026/copy data/202509-divvy-tripdata.csv";
 
 CREATE OR REPLACE TABLE Oct_2025 AS
 FROM
-  "/Users/enzomendoza/Documents/divvy_trip_data_Aug2025_to_Aug2026/copy data/202510-divvy-tripdata.csv";
+  "/Users/Documents/divvy_trip_data_Aug2025_to_Aug2026/copy data/202510-divvy-tripdata.csv";
 
 CREATE OR REPLACE TABLE Nov_2025 AS
 FROM
-  "/Users/enzomendoza/Documents/divvy_trip_data_Aug2025_to_Aug2026/copy data/202511-divvy-tripdata.csv";
+  "/Users/Documents/divvy_trip_data_Aug2025_to_Aug2026/copy data/202511-divvy-tripdata.csv";
 
 CREATE OR REPLACE TABLE Dec_2025 AS
 FROM
-  "/Users/enzomendoza/Documents/divvy_trip_data_Aug2025_to_Aug2026/copy data/202512-divvy-tripdata.csv";
+  "/Users/Documents/divvy_trip_data_Aug2025_to_Aug2026/copy data/202512-divvy-tripdata.csv";
 
 CREATE OR REPLACE TABLE Feb_2026 AS
 FROM
-  "/Users/enzomendoza/Documents/divvy_trip_data_Aug2025_to_Aug2026/copy data/202602-divvy-tripdata.csv";
+  "/Users/Documents/divvy_trip_data_Aug2025_to_Aug2026/copy data/202602-divvy-tripdata.csv";
 
 CREATE OR REPLACE TABLE March_2026 AS
 FROM
-  "/Users/enzomendoza/Documents/divvy_trip_data_Aug2025_to_Aug2026/copy data/202603-divvy-tripdata.csv";
+  "/Users/Documents/divvy_trip_data_Aug2025_to_Aug2026/copy data/202603-divvy-tripdata.csv";
 
 CREATE OR REPLACE TABLE April_2026 AS
 FROM
-  "/Users/enzomendoza/Documents/divvy_trip_data_Aug2025_to_Aug2026/copy data/202604-divvy-tripdata.csv";
+  "/Users/Documents/divvy_trip_data_Aug2025_to_Aug2026/copy data/202604-divvy-tripdata.csv";
 
 CREATE OR REPLACE TABLE May_2026 AS
 FROM
-  "/Users/enzomendoza/Documents/divvy_trip_data_Aug2025_to_Aug2026/copy data/202605-divvy-tripdata.csv";
+  "/Users/Documents/divvy_trip_data_Aug2025_to_Aug2026/copy data/202605-divvy-tripdata.csv";
 
 CREATE OR REPLACE TABLE June_2026 AS
 FROM
-  "/Users/enzomendoza/Documents/divvy_trip_data_Aug2025_to_Aug2026/copy data/202606-divvy-tripdata.csv";
+  "/Users/Documents/divvy_trip_data_Aug2025_to_Aug2026/copy data/202606-divvy-tripdata.csv";
 
 CREATE OR REPLACE TABLE July_2026 AS
 FROM
-  "/Users/enzomendoza/Documents/divvy_trip_data_Aug2025_to_Aug2026/copy data/202607-divvy-tripdata.csv";
+  "/Users/Documents/divvy_trip_data_Aug2025_to_Aug2026/copy data/202607-divvy-tripdata.csv";
 
 CREATE OR REPLACE TABLE Aug_2026 AS
 FROM
-  "/Users/enzomendoza/Documents/divvy_trip_data_Aug2025_to_Aug2026/copy data/202508-divvy-tripdata.csv";
+  "/Users/Documents/divvy_trip_data_Aug2025_to_Aug2026/copy data/202508-divvy-tripdata.csv";
 
 ###-- Appends all rows of each table into one table all_trips
 CREATE TABLE all_trips AS
@@ -268,4 +268,4 @@ WHERE start_station_name IS NOT NULL AND end_station_name IS NOT NULL
 GROUP BY member_casual;
 
 ###-- Exports all tables file directory
-EXPORT DATABASE '/Users/enzomendoza/Documents/database/' (FORMAT CSV, HEADER);
+EXPORT DATABASE '/Users/Documents/database/' (FORMAT CSV, HEADER);
