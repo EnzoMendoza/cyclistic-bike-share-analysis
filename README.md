@@ -84,3 +84,16 @@ This is the process I went through while completing this case study.
   WHERE ride_id IS NOT NULL
     AND started_at IS NOT NULL
     AND date_diff('second', started_at, ended_at) >= 60;
+
+-- ANALYZE
+  I created 12 tables for which to compare and contrast and find relationships between casual users and members. Originally 6.7 million rides between August 2025 and July 2026, I cutoff rides that were less than one minute and longer than 24 hours because they are outliers. The result left me with 5.7 million rides with a split of 64.4 percent split for members and 35.6 percent for casual users. Below you will find my analysis from the given information:
+-- MONTHLY USE OF THE SERVICE
+  Riders peak for both users (casual/members) in the warmer seasons and decline gradually into the colder months.
+  Ride length increases greatly for casual users in the summer (21.7 min) compared to the lows of December ( 12.8 min). Members ride length stays consistent throughout the year with a difference of 3 minutes between the high of July and low of December.
+-- WHERE DO USERS START AND END THEIR RIDES
+  Casual users start and end their rides in more populated areas such as Navy Pier, most likely due to use for leisure.
+  Members start and end their rides in the same 10 stations, showing a consistent pattern due to being used for transportation for work.
+-- HOW THE SERVICE IS USED
+  There is a stark contrast between when the bikes are used between casual users members. The weekdays (Mon-Fri) are predominantly used by members, suspected as they are traveling to and from work. This is backed by the fact that the majority of rides are started at 8 am and 5 pm, which is the normal start and end of the working day.
+  Casual users are nearly on-par with the amount of members on the weekend, where the casual users most likely use it for leisure to explore around the city. 
+  Casual users also have longer average ride lengths in general compared to members, but especially on weekends (Fri-Sat). This further strengthens the correlation between casual users and leisure activities. Members ride length remains consistent throughout the week, including the weekend.
