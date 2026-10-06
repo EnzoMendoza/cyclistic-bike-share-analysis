@@ -1,6 +1,6 @@
 #This is a log of all cleaning/processing of data for this project
 
-###--Loading all csv files into separate tables.
+### --Loading all csv files into separate tables.
 CREATE OR REPLACE TABLE Aug_2025 AS
 FROM
   "/Users/enzomendoza/Documents/divvy_trip_data_Aug2025_to_Aug2026/copy data/202508-divvy-tripdata.csv";
