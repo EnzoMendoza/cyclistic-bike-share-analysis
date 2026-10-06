@@ -1,4 +1,4 @@
-# cyclist-bike-share-analysis
+# Cyclistic-bike-share-analysis
 My first case study in my data journey! This is the capstone project for Coursera's Google Data Analytics Course.
 This is the process I went through while completing this case study.
 
